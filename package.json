@@ -1,0 +1,31 @@
+{
+  "name": "webgl-detect",
+  "version": "0.0.1",
+  "description": "Detect WebGL support.",
+  "main": "webgl-detect.js",
+  "directories": {
+
+  },
+  "scripts": {
+    "test": "node test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelmota/webgl-detect"
+  },
+  "keywords": [
+    "webgl",
+    "opengl",
+    "detect",
+    "support"
+  ],
+  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguelmota/webgl-detect/issues"
+  },
+  "homepage": "https://github.com/miguelmota/webgl-detect",
+  "dependencies": {
+
+  }
+}
