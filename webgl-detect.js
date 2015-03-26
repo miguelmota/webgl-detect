@@ -1,26 +1,26 @@
 (function(root) {
 
   var webglDetect = (function() {
-    var cvs = document.createElement('canvas');
+    var canvas = document.createElement('canvas');
     var contextNames = ['webgl','experimental-webgl','moz-webgl','webkit-3d'];
-    var ctx;
+    var context;
 
-    if (navigator.userAgent.indexOf('MSIE') >= 0) {
-      try{
-        ctx = WebGLHelper.CreateGLContext(cvs, 'canvas');
-       }catch(e){}
+    if (~navigator.userAgent.indexOf('MSIE')) {
+      try {
+        context = WebGLHelper.CreateGLContext(canvas, 'canvas');
+      } catch(e) {}
     } else {
-      for (var i = 0; i < contextNames.length; i++){
-        try{
-          ctx = cvs.getContext(contextNames[i]);
-          if (ctx) {
+      for (var i = 0; i < contextNames.length; i++) {
+        try {
+          context = canvas.getContext(contextNames[i]);
+          if (context) {
             break;
           }
-        }catch(e){}
+        } catch(e) {}
       }
     }
 
-    return !!ctx;
+    return !!context;
   })();
 
   if (typeof exports !== 'undefined') {
